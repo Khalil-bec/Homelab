@@ -1,5 +1,11 @@
+#TLS
+certs/*
+!certs/.gitkeep
+#ENVIRONMENT
 .env
+*.env
 .venv/
+
+#ANSIBLE
 ansible/.collections/
 .vault_pass
-.env
