@@ -1,1 +1,5 @@
 .env
+.venv/
+ansible/.collections/
+.vault_pass
+.env
