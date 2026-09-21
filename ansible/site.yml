@@ -1,0 +1,20 @@
+- name : automatisation des taches
+  hosts : homelab
+  tasks:
+    - name: lancement du network docker
+      community.docker.docker_network:
+        name: "shared-net"
+        state: present
+
+    - name: lancement du traefik
+      community.docker.docker_compose_v2:
+        project_src: ../traefik
+        state: present
+    - name : lancement de node-exporter , prometheus et grafana
+      community.docker.docker_compose_v2:
+        project_src: ../monitoring
+        state: present
+    - name : lancement de kuma
+      community.docker.docker_compose_v2:
+        project_src: ..
+        state: present
