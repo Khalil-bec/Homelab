@@ -1,6 +1,7 @@
 #TLS
-certs/*
-!certs/.gitkeep
+traefik/certs/*
+traefik/!certs/.gitkeep
+
 #ENVIRONMENT
 .env
 *.env
