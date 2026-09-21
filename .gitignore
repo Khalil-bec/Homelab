@@ -1,6 +1,6 @@
 #TLS
 traefik/certs/*
-traefik/!certs/.gitkeep
+!traefik/certs/.gitkeep
 
 #ENVIRONMENT
 .env
