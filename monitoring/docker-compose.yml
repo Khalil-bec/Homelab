@@ -21,7 +21,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=shared-net"
-      - "traefik.http.routers.prometheus.rule=Host(`prometheus.home.local`)"
+      - "traefik.http.routers.prometheus.rule=Host(`prometheus.homelab.lab`)"
       - "traefik.http.services.prometheus.loadbalancer.server.port=9090"
 
   grafana:
@@ -39,7 +39,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=shared-net"
-      - "traefik.http.routers.grafana.rule=Host(`grafana.home.local`)"
+      - "traefik.http.routers.grafana.rule=Host(`grafana.homelab.lab`)"
       - "traefik.http.services.grafana.loadbalancer.server.port=3000"
 
 volumes:

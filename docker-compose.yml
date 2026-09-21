@@ -12,7 +12,7 @@ services:
       - default
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.kuma.rule=Host(`kuma.home.local`)"
+      - "traefik.http.routers.kuma.rule=Host(`kuma.homelab.lab`)"
       - "traefik.http.services.kuma.loadbalancer.server.port=3001"  
 networks:
   shared-net: 
