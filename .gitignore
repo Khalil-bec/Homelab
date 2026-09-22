@@ -11,3 +11,4 @@ traefik/certs/*
 ansible/.collections/
 .vault_pass
 ansible/.venv/
+.collections/
