@@ -16,5 +16,5 @@
         state: present
     - name : lancement de kuma
       community.docker.docker_compose_v2:
-        project_src: ..
+        project_src: ../monitoring/kuma
         state: present
