@@ -12,8 +12,15 @@ services:
       - default
     labels:
       - "traefik.enable=true"
+      - "traefik.docker.network=shared-net"
       - "traefik.http.routers.kuma.rule=Host(`kuma.homelab.lab`)"
-      - "traefik.http.services.kuma.loadbalancer.server.port=3001"  
+      - "traefik.http.routers.kuma.entrypoints=websecure"
+      - "traefik.http.routers.kuma.tls=true"
+      - "traefik.http.services.kuma.loadbalancer.server.port=3001"
+    extra_hosts:
+      - "grafana.homelab.lab:host-gateway"
+      - "prometheus.homelab.lab:host-gateway"
+      - "traefik.homelab.lab:host-gateway"
 networks:
   shared-net: 
     external: true
